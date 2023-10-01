@@ -12,6 +12,7 @@ body {
     font-family: "Poppins", "sans-serif";
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -25,6 +26,22 @@ p {
 a, .btn {
     transition: all 300ms ease;
 } 
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
+
 
 /* Desktop Nav */
 
@@ -175,7 +192,6 @@ a:hover {
     display: flex;
     height: 400px;
     width: 400px;
-    border-radius: 50%;
     margin: auto 0;
 }
 
@@ -294,7 +310,7 @@ a:hover {
 
 .details-container {
     padding: 1.5rem;
-    flex: 1;
+    flex: 4;
     background: white;
     border-radius: 2rem;
     border: rgb(53, 53,53) 0.1rem solid;
@@ -312,4 +328,122 @@ a:hover {
     width: 400px;
     margin: auto 0;
 }
-  
+
+/* Experience Section */
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon {
+    cursor: default;
+}
+
+/* Projects Section */
+
+#projects {
+    position: relative;
+}
+
+.details-container color-container:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.details-container color-container:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn {
+    color:black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* Contact */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container {
+    font-size: larger;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+.email-icon {
+    height: 2.5rem;
+}
+
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+}
