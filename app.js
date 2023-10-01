@@ -1,13 +1,16 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.hidden');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    animatedElements.forEach((el) => {
+        observer.observe(el);
     });
-}, { threshold: 0.5 });
-
-const animatedElements = document.querySelectorAll('.hidden');
-
-animatedElements.forEach((el) => {
-    observer.observe(el);
 });

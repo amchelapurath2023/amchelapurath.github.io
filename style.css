@@ -2,6 +2,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Poppins:wght@300;400;500;600&display=swap');
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #fff;
+  }
+  
+  @keyframes animateBackground {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  body::before {
+    animation: animateBackground 10s infinite alternate;
+    opacity: 0.1;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="rgba(0, 0, 0, 0.1)" /></svg>');
+  }
+  
+
 
 * {
     margin: 0;
@@ -32,8 +69,89 @@ a, .btn {
     transition: all 1s;
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.slide-in {
+    transform: translateY(100%);
+    transition: transform 1s;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.zoom-in {
+    transform: scale(0);
+    transition: transform 1s ease-in;
+}
+
+.pulse {
+    animation: pulseAnimation 1s alternate;
+}
+
 .show {
     opacity: 1;
+}
+
+.show.fade-in {
+    opacity: 1;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeftAnimation 1s forwards;
+}
+
+@keyframes fadeInLeftAnimation {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.show.slide-in {
+    transform: translateY(0);
+}
+
+.show.slide-in-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.show.zoom-in {
+    transform: scale(1);
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.show.slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpAnimation 1s forwards;
+}
+
+@keyframes slideUpAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (prefers-reduced-motion) {
@@ -316,6 +434,7 @@ a:hover {
     border: rgb(53, 53,53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
+
 }
 
 .section-container {
@@ -323,10 +442,12 @@ a:hover {
     height: 80%;
 }
 
-.section__pic-container {
+.section2__pic-container {
+    display: flex;
     height: 400px;
     width: 400px;
     margin: auto 0;
+    text-align: justify;
 }
 
 /* Experience Section */

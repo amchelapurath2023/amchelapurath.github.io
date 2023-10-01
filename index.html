@@ -39,14 +39,14 @@
       </div>
     </nav>
     <section id="profile">
-        <div class="section__pic-container">
+        <div class="section__pic-container hidden slide-in-left">
             <img src="./assets/profile-pic.png" alt="Anshul Chelapurath Profile Picture">
         </div>
         <div class="section__text">
-            <p class="section__text__p1 hidden">Hello, I'm</p>
-            <h1 class="title hidden">Anshul Chelapurath</h1>
-            <p class="section__text__p2 hidden">CS @ Georgia Tech</p>
-            <div class="btn-container hidden">
+            <p class="section__text__p1 hidden zoom-in">Hello, I'm</p>
+            <h1 class="title hidden zoom-in">Anshul Chelapurath</h1>
+            <p class="section__text__p2 hidden zoom-in">CS @ Georgia Tech</p>
+            <div class="btn-container hidden zoom-in">
                 <button 
                 class="btn btn-color-2"
                 onclick="window.open('./assets/resume-example.pdf')"
@@ -63,36 +63,29 @@
             <img 
             src="./assets/linkedin.png" 
             alt="My Linkedin profile"
-            class="icon" 
+            class="icon animate__animated animate__rubberBand" 
             onclick="location.href='https://www.linkedin.com/in/anshul-chelapurath/'"
             />
             <img
             src="./assets/github.png"
             alt="My Github profile"
-            class="icon"
+            class="icon animate__animated animate__rubberBand"
             onclick="location.href='https://github.com/amchelapurath2023'"
             />   
         </div>
         </div>
       </section>
       <section id="about">
-        <p class="section__text__p1 hidden">Get to Know More</p>
-        <h1 class="title">About Me</h1>
+        <p class="section__text__p1 hidden fade-in">Get to Know More</p>
+        <h1 class="title hidden fade-in">About Me</h1>
         <div class="section-container">
-            <div class="section__pic-container">
+            <div class="section2__pic-container">
                 <img src="./assets/about-pic.png" alt="Profile picture" 
-                class="about-pic"
+                class="about-pic hidden slide-in-left"
                 />
             </div>
-            <div class="about-details-container">
+            <div class="about-details-container hidden pulse">
                 <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="experience icon"
-                        class="icon"
-                        />
-                        <h3>Experience</h3>
-                        <p>2+ years <br /> Frontend Development</p>
-                    </div>
                     <div class="details-container">
                         <img
                         src="./assets/education.png"
@@ -100,11 +93,17 @@
                         class="icon"
                         />
                         <h3>Education</h3>
-                        <p>B.S. Computer Science</p>
+                        <p>Pursuing B.S. Computer Science at Georgia Institute of Technology with Threads in Intelligence and Internet Infoworks</p>
                     </div>
                 </div>
-                <div class="text-container">
-                    <p>Specializing in the Intelligence and Internet Infoworks Threads</p>
+                <div class="text-container hidden fade-in">
+                    <p>
+                        I am current freshman at Georgia Tech. I am involved with the Global Leadership LLC, Trading Club, 
+                        Startup Exchange Genesis, Greyhat @ GT, GT Web Dev, and am a GT Venture Capital Fellow. My current relevant classes include CS 1332: Data Structures & Algorithms
+                        and MATH 1544: Linear Algebra. I have an extensive background in cybersecurity, information technology, IOT devices, and network systems. 
+                        Alongside my technical experience, I have also led project teams and organized large scale conferences and CTF competitions. I am currently pursuing ideas and opportunities
+                        to break into new areas of computer science such as Machine Learning, Full Stack, and Automation.
+                    </p>
                 </div>
             </div>
         </div>
@@ -119,71 +118,235 @@
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img
-                            src="./assets/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img
-                            src="./assets/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img
-                            src="./assets/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img
-                            src="./assets/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>React</h3>
-                                <p>Learing</p>
-                            </div>
-                        </article>
-                        
-                    </div>
-                </div>
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Programming Languages</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Python</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Java</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Bash</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>C++</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+              </div>
             </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Frameworks and Tools</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>SQL</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Flask</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Scikit-learn</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Git</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>OpenCV</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>NumPy</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>MQTT</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Docker</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Wireshark</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>BurpSuite</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>MSF</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+              </div>
+            </div>
+            <div class="details-container">
+                <h2 class="experience-sub-title">Certifications</h2>
+                <div class="article-container">
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>CompTIA Network+</h3>
+                      <p>2020</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>CompTIA Security+</h3>
+                      <p>2021</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+          </div>
         </div>
-        <img 
-        src = "./assets/arrow.png"
-        alt = "Arrow icon"
-        class = "icon arrow"
-        onclick = "location.href='./#projects'">
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />
       </section>
       <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class = "experience-details-container">
             <div class="about-containers">
-        <div class = "details-container color-container hidden">
+        <div class = "details-container color-container hidden fade-in-left">
             <div class="article-container">
                 <img
                 src="./assets/project-1.png"
@@ -191,19 +354,19 @@
                 class="project-img"
                 />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Daily Stoic Bot</h2>
             <div class="btn-container">
                 <button
-                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023'">
+                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023/StoicBot'"">
                 Github
             </button>
             <button
-                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023'">
+                class="btn btn-color-2 project-btn" onclick="location.href='https://discord.gg/DY6pUEDT9d'">
                 Live Demo
             </button>
             </div>
         </div>
-        <div class = "details-container color-container hidden">
+        <div class = "details-container color-container hidden fade-in-left">
             <div class="article-container">
                 <img
                 src="./assets/project-2.png"
@@ -211,37 +374,23 @@
                 class="project-img"
                 />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Linux Hardening Bash Script</h2>
             <div class="btn-container">
                 <button
-                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023'">
+                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023/CPBashScript/'">
                 Github
-            </button>
-            <button
-                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023'">
-                Live Demo
             </button>
             </div>
         </div>
-        <div class = "details-container color-container hidden">
+        <div class = "details-container color-container hidden fade-in-left">
             <div class="article-container">
                 <img
-                src="./assets/project-3.png"
-                alt="Project 2"
+                src="./assets/giphy.gif"
+                alt="Project 3"
                 class="project-img"
                 />
             </div>
             <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-                <button
-                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023'">
-                Github
-            </button>
-            <button
-                class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/amchelapurath2023'">
-                Live Demo
-            </button>
-            </div>
         </div>
         <img 
         src = "./assets/arrow.png"
